@@ -20,3 +20,5 @@ const a = prompt("Name last movie", ""),
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 console.log(personalMovieDB);
+
+alert("i've done it!");
