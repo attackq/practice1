@@ -22,3 +22,4 @@ personalMovieDB.movies[c] = d;
 console.log(personalMovieDB);
 
 alert("i've done it!");
+alert("new alert");
