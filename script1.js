@@ -35,7 +35,7 @@ const calc = (a, b) => {
     return a + b;
 }; */
 
-const str = "teSt";
+/* const str = "teSt";
 
 console.log(str.toLowerCase());
 console.log(str);
@@ -44,17 +44,58 @@ const fruit = "some fruit";
 
 console.log(fruit.indexOf("q"));
 
-const logg = "I am Olga";
+const logg = "I am Olga"; */
 
 // console.log(logg.slice(5, 9));
 
 // console.log(logg.substring(5, 9));
 
-console.log(logg.substr(5, 4));
+/* console.log(logg.substr(5, 4));
 
 const num = 12.2;
 console.log(Math.round(num));
 
 const test = "12.2px";
 console.log(parseInt(test));
-console.log(parseFloat(test));
+console.log(parseFloat(test)); */
+
+
+/* function isIsogram(str){
+    let b = str.length;
+    let v = str.toLowerCase();
+   // console.log(v);
+    for (let i = 0; i < b; i++) {
+        let a = v.substring(i, i + 1);
+        console.log(a);
+        let c = v.substring(i + 1, b);
+        console.log(c);
+
+        if (c.includes(a)) {
+            console.log("false!!!");
+            break;
+        } else if (c.includes(a) == false){
+
+            console.log("true!!!");
+            break;
+        }
+
+    }
+
+  }
+
+  isIsogram("moOse"); */
+
+  function isIsogram(str) {
+      let i, j;
+      str = str.toLowerCase();
+      for(i = 0; i < str.length; i++) {
+          for (j = i + 1; j < str.length; j++) {
+              if (str[i] === str[j]) {
+                  console.log('falseeee');
+              }
+          }
+      }
+      console.log('trueeee');
+  }
+
+  isIsogram('katya');
