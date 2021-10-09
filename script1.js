@@ -85,7 +85,7 @@ console.log(parseFloat(test)); */
 
   isIsogram("moOse"); */
 
-  function isIsogram(str) {
+ /*  function isIsogram(str) {
       let i, j;
       str = str.toLowerCase();
       for(i = 0; i < str.length; i++) {
@@ -98,4 +98,116 @@ console.log(parseFloat(test)); */
       console.log('trueeee');
   }
 
-  isIsogram('katya');
+  isIsogram('katya'); */
+
+ /* function first() {
+     // do something
+     setTimeout(function() {
+         console.log(1);
+     }, 500);
+ }
+
+ function second() {
+     console.log(2);
+ }
+ first();
+ second();
+
+ function learnJS(lang, callback) {
+     console.log(`Я учу: ${lang}`);
+     callback();
+ }
+function done() {
+    console.log('я прошел этот урок');
+}
+ learnJS('javascript', done); */
+
+/* const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function() {
+        console.log("test!");
+    }
+};
+
+options.makeTest();
+
+const {border, bg} = options.colors;
+console.log(border);
+
+console.log(Object.keys(options).length);
+const obj = {
+    name: "alex",
+    weight: 70,
+    height: 178,
+    eys: 'brown',
+    parts: {
+        legs: 2,
+        arms: 2
+    }
+};
+obj.gender = 'male';
+console.log(obj);
+
+console.log(Object.keys(obj).length); */
+/* console.log(options["colors"]["border"]);
+
+delete options.name;
+console.log(options); */
+/* let counter = 0;
+for (let key in options) {
+    if (typeof(options[key]) === 'object') {
+        for (let i in options[key]) {
+            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+
+        }
+    } else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+        counter++;
+    }
+
+}
+
+console.log(counter); */
+
+const arr = [14, 22, 3, 24, 8];
+
+arr.sort(compareNum);
+console.log(arr);
+
+function compareNum(a, b) {
+    return a - b;
+}
+
+/* arr[99] = 0;
+console.log(arr.length);
+console.log(arr); */
+
+/* arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+}); */
+
+/* arr.pop();
+arr.push(10);
+
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+for (let value of arr) {
+    console.log(value)
+} */
+
+
+/* const str = prompt('', "");
+
+const products = str.split(', ');
+products.sort();
+console.log(products.join('; ')); */
