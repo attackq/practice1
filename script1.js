@@ -20,7 +20,7 @@ copy.a = 10;
 console.log(copy);
 console.log(obj); */
 
-function copy (mainObj) {
+/* function copy (mainObj) {
     let objCopy = {};
 
     let key;
@@ -55,11 +55,11 @@ const add = {
 
 const clone = Object.assign({}, add);
 
-clone.d = 20;
+clone.d = 20; */
 
 /* console.log(add);
 console.log(clone); */
-
+/*
 const oldArray = ['a', 'b', 'c'];
 
 const newArray = oldArray.slice();
@@ -99,4 +99,43 @@ const q = {
 
 const newOb = {...q};
 console.log(q);
-console.log(newOb);
+console.log(newOb); */
+
+// To String
+console.log(typeof(String(1233)));
+
+console.log(typeof(5 + ''));
+
+const num = 5;
+
+console.log("https://vk.com/catalog" + num);
+
+const fontSize = 26 + 'px';
+
+//To Number
+console.log(typeof(+'4'));
+
+
+console.log(typeof(parseInt('15px', 10)));
+
+let answ = +prompt("Hello", "");
+
+// To Boolean
+
+// 0, '', null, undefined, NaN;
+
+let switcher = null;
+
+if (switcher) {
+    console.log("working...");
+}
+
+switcher = 1;
+
+if (switcher) {
+    console.log("working...");
+}
+
+console.log(typeof(Boolean('4')));
+
+console.log(typeof(Boolean(!!'4444')));
