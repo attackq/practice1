@@ -1,213 +1,102 @@
 "use strict";
-/* let num = 20;
-function showFirstMessage(text) {
-    console.log(text);
-    num = 10;
-}
 
-showFirstMessage("HELLO!");
-console.log(num);
+/* let a = 5,
+    b = a;
 
-/* function calc(a, b) {
-    return (a + b);
-}
+b = b + 5;
 
-console.log(calc(4,3));
-console.log(calc(5,5));
-console.log(calc(10,6)); */
+console.log(b);
+console.log(a);
 
-/* function ret() {
-    let num = 50;
-    return num;
-}
-
-const anotherNum = ret();
-console.log(anotherNum);
-
-const logger = function() {
-    console.log("hello");
-};
-
-logger();
-
-const calc = (a, b) => {
-    console.log('1');
-    return a + b;
-}; */
-
-/* const str = "teSt";
-
-console.log(str.toLowerCase());
-console.log(str);
-
-const fruit = "some fruit";
-
-console.log(fruit.indexOf("q"));
-
-const logg = "I am Olga"; */
-
-// console.log(logg.slice(5, 9));
-
-// console.log(logg.substring(5, 9));
-
-/* console.log(logg.substr(5, 4));
-
-const num = 12.2;
-console.log(Math.round(num));
-
-const test = "12.2px";
-console.log(parseInt(test));
-console.log(parseFloat(test)); */
-
-
-/* function isIsogram(str){
-    let b = str.length;
-    let v = str.toLowerCase();
-   // console.log(v);
-    for (let i = 0; i < b; i++) {
-        let a = v.substring(i, i + 1);
-        console.log(a);
-        let c = v.substring(i + 1, b);
-        console.log(c);
-
-        if (c.includes(a)) {
-            console.log("false!!!");
-            break;
-        } else if (c.includes(a) == false){
-
-            console.log("true!!!");
-            break;
-        }
-
-    }
-
-  }
-
-  isIsogram("moOse"); */
-
- /*  function isIsogram(str) {
-      let i, j;
-      str = str.toLowerCase();
-      for(i = 0; i < str.length; i++) {
-          for (j = i + 1; j < str.length; j++) {
-              if (str[i] === str[j]) {
-                  console.log('falseeee');
-              }
-          }
-      }
-      console.log('trueeee');
-  }
-
-  isIsogram('katya'); */
-
- /* function first() {
-     // do something
-     setTimeout(function() {
-         console.log(1);
-     }, 500);
- }
-
- function second() {
-     console.log(2);
- }
- first();
- second();
-
- function learnJS(lang, callback) {
-     console.log(`Я учу: ${lang}`);
-     callback();
- }
-function done() {
-    console.log('я прошел этот урок');
-}
- learnJS('javascript', done); */
-
-/* const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function() {
-        console.log("test!");
-    }
-};
-
-options.makeTest();
-
-const {border, bg} = options.colors;
-console.log(border);
-
-console.log(Object.keys(options).length);
 const obj = {
-    name: "alex",
-    weight: 70,
-    height: 178,
-    eys: 'brown',
-    parts: {
-        legs: 2,
-        arms: 2
+    a: 5,
+    b: 1
+};
+ */
+/* const copy = obj;
+
+copy.a = 10;
+
+console.log(copy);
+console.log(obj); */
+
+function copy (mainObj) {
+    let objCopy = {};
+
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
+}
+
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
     }
 };
-obj.gender = 'male';
-console.log(obj);
 
-console.log(Object.keys(obj).length); */
-/* console.log(options["colors"]["border"]);
+const newNumbers = copy(numbers);
 
-delete options.name;
-console.log(options); */
-/* let counter = 0;
-for (let key in options) {
-    if (typeof(options[key]) === 'object') {
-        for (let i in options[key]) {
-            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+newNumbers.a = 10;
+newNumbers.c.x = 10;
 
-        }
-    } else {
-        console.log(`Свойство ${key} имеет значение ${options[key]}`);
-        counter++;
-    }
+console.log(newNumbers);
+console.log(numbers);
 
-}
+const add = {
+    d:17,
+    e: 20
+};
 
-console.log(counter); */
+const clone = Object.assign({}, add);
 
-const arr = [14, 22, 3, 24, 8];
+clone.d = 20;
 
-arr.sort(compareNum);
-console.log(arr);
+/* console.log(add);
+console.log(clone); */
 
-function compareNum(a, b) {
-    return a - b;
-}
+const oldArray = ['a', 'b', 'c'];
 
-/* arr[99] = 0;
-console.log(arr.length);
-console.log(arr); */
+const newArray = oldArray.slice();
 
-/* arr.forEach(function(item, i, arr) {
-    console.log(`${i}: ${item} внутри массива ${arr}`);
-}); */
+newArray[1] = 'ddfasdfasfa';
+console.log(oldArray);
+console.log(newArray);
 
-/* arr.pop();
-arr.push(10);
+const video = ['youtube', 'vimeo', 'rutube'],
+      blogs = ['wordpress', 'livejournal', 'blogger'],
+      internet = [...video, ...blogs, 'vk', 'facebook'];
 
-console.log(arr);
+      console.log(internet);
 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-}
+   function log(a, b, c) {
+          console.log(a);
+          console.log(b);
+          console.log(c);
 
-for (let value of arr) {
-    console.log(value)
-} */
+      }
 
+const num = [2, 5, 7];
 
-/* const str = prompt('', "");
+log(...num);
 
-const products = str.split(', ');
-products.sort();
-console.log(products.join('; ')); */
+const array = ['a', 'b'];
+
+const newAarray = [...array];
+
+console.log(array);
+console.log(newAarray);
+
+const q = {
+    one: 1,
+    two: 2
+};
+
+const newOb = {...q};
+console.log(q);
+console.log(newOb);
