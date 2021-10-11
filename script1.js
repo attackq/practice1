@@ -1,141 +1,37 @@
 "use strict";
 
-/* let a = 5,
-    b = a;
+/* let x = 5;
+alert(x++); */
 
-b = b + 5;
+// [] + false - null + true;
 
-console.log(b);
-console.log(a);
+//console.log([] + false + true);
 
-const obj = {
-    a: 5,
-    b: 1
-};
- */
-/* const copy = obj;
+/* let y = 1;
+let x = y = 2;
+alert(x); */
 
-copy.a = 10;
+// console.log([] + 1 + 2);
 
-console.log(copy);
-console.log(obj); */
+// alert("543"[2]);
 
-/* function copy (mainObj) {
-    let objCopy = {};
+// console.log(2 && 1  && undefined);
 
-    let key;
-    for (key in mainObj) {
-        objCopy[key] = mainObj[key];
-    }
-
-    return objCopy;
-}
-
-const numbers = {
-    a: 2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4
-    }
-};
-
-const newNumbers = copy(numbers);
-
-newNumbers.a = 10;
-newNumbers.c.x = 10;
-
-console.log(newNumbers);
-console.log(numbers);
-
-const add = {
-    d:17,
-    e: 20
-};
-
-const clone = Object.assign({}, add);
-
-clone.d = 20; */
-
-/* console.log(add);
-console.log(clone); */
-/*
-const oldArray = ['a', 'b', 'c'];
-
-const newArray = oldArray.slice();
-
-newArray[1] = 'ddfasdfasfa';
-console.log(oldArray);
-console.log(newArray);
-
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wordpress', 'livejournal', 'blogger'],
-      internet = [...video, ...blogs, 'vk', 'facebook'];
-
-      console.log(internet);
-
-   function log(a, b, c) {
-          console.log(a);
-          console.log(b);
-          console.log(c);
-
-      }
-
-const num = [2, 5, 7];
-
-log(...num);
-
-const array = ['a', 'b'];
-
-const newAarray = [...array];
-
-console.log(array);
-console.log(newAarray);
-
-const q = {
-    one: 1,
-    two: 2
-};
-
-const newOb = {...q};
-console.log(q);
-console.log(newOb); */
-
-// To String
-console.log(typeof(String(1233)));
-
-console.log(typeof(5 + ''));
-
-const num = 5;
-
-console.log("https://vk.com/catalog" + num);
-
-const fontSize = 26 + 'px';
-
-//To Number
-console.log(typeof(+'4'));
+// И запинается на лжи
+// ИЛИ запинается на правде
 
 
-console.log(typeof(parseInt('15px', 10)));
+alert(null || 2 && 3 || 4);
 
-let answ = +prompt("Hello", "");
+/* alert(null || 2 && 3 || 4);
+alert(3 || 4); */
+/* let a = [1, 2, 3],
+    b = [1, 2, 3];
+    console.log(a === b); */
 
-// To Boolean
+/* alert( typeof(+"Infinity")  );
 
-// 0, '', null, undefined, NaN;
+console.log("ажик" < "яблоко"); */
 
-let switcher = null;
+/* console.log(0 || '' || 2 || undefined || true || false); */
 
-if (switcher) {
-    console.log("working...");
-}
-
-switcher = 1;
-
-if (switcher) {
-    console.log("working...");
-}
-
-console.log(typeof(Boolean('4')));
-
-console.log(typeof(Boolean(!!'4444')));
